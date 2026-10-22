@@ -1,0 +1,10 @@
+# Compiled C++ programs
+*.exe
+*.out
+
+# Temporary Code Runner files
+tempCodeRunnerFile.cpp
+
+# Windows system files
+desktop.ini
+Thumbs.db

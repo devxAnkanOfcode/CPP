@@ -85,17 +85,57 @@
 // }
 
 // Given an array of inegers, change the value of all odd indexed elements to its second multiple and increment all even indexed vaiue by 10-->
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int arr[]={2,5,4,3,6};
+//     for(int i=0;i<=4; i++){
+//         if(arr[i]%2==0){
+//             arr[i]+=10;
+//         }
+//         else{
+//             arr[i]*=2;
+//         }
+//         cout<<arr[i]<<" ";
+//     }
+// }
+
+
+
+//Count the number of elements in given array greater than a given number x-->
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int arr[]={1,5,3,7,6,9};
+//     int x=4;
+//     int count=0;
+//     for(int i=0;i<=5;i++){
+//         if(arr[i]>x){
+//             count++;
+//         }
+        
+//     }
+//     cout<<count<<" ";
+// }
+
+
+//Find the second largest element in a given array-->
 #include<iostream>
+#include<climits>
 using namespace std;
 int main(){
-    int arr[]={2,5,4,3,6};
-    for(int i=0;i<=4; i++){
-        if(arr[i]%2==0){
-            arr[i]+=10;
+    int arr[]={1,5,4,8,3,45,7,33};
+    int mx=INT_MAX;
+    int smx=INT_MAX;
+    for(int i=0;i<=7;i++){
+        if(arr[i]>mx){
+            mx=arr[i];
         }
-        else{
-            arr[i]*=2;
-        }
-        cout<<arr[i]<<" ";
     }
+    for(int j=0;j<=7;j++){
+        if(arr[j]!=mx){
+            smx=arr[j];
+        }
+    }
+    cout<<smx;
 }

@@ -100,42 +100,80 @@
 //     }
 // }
 
+// Count the number of elements in given array greater than a given number x-->
+//  #include<iostream>
+//  using namespace std;
+//  int main(){
+//      int arr[]={1,5,3,7,6,9};
+//      int x=4;
+//      int count=0;
+//      for(int i=0;i<=5;i++){
+//          if(arr[i]>x){
+//              count++;
+//          }
 
-
-//Count the number of elements in given array greater than a given number x-->
-// #include<iostream>
-// using namespace std;
-// int main(){
-//     int arr[]={1,5,3,7,6,9};
-//     int x=4;
-//     int count=0;
-//     for(int i=0;i<=5;i++){
-//         if(arr[i]>x){
-//             count++;
-//         }
-        
 //     }
 //     cout<<count<<" ";
 // }
 
+// Find the second largest element in a given array-->
+// #include <iostream>
+// #include <climits>
+// using namespace std;
+// int main()
+// {
+//     int arr[] = {10, 20, 14, 2, 5, 26, 87};
+//     int max = INT_MIN;
+//     int secMax = INT_MIN;
+//     for (int i = 0; i <= 6; i++)
+//     {
+//         if (arr[i] > max)
+//         {
+//             max = arr[i];
+//         }
+//     }
+//     for (int j = 0; j <= 6; j++)
+//     {
+//         if (arr[j] != max && arr[j]>secMax)
+//         {
+//             secMax = arr[j];
+//         }
+//     }
+//     cout << "The maximum number in the array is: " << max << endl;
+//     cout << "The second maximum number in the array is: " << secMax;
+// }
 
-//Find the second largest element in a given array-->
+
+
+//Write a program to copy the contents of onr array ino another array in reverse order-->
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int arr1[]={10,20,30,40,50};
+//     int arr2[5];
+//     for(int i=0;i<=4;i++){
+//         arr2[i]=arr1[4-i];
+//         cout<<arr2[i]<<" ";
+//     }
+// }
+
+
+
+//Write a program to reverse the array without using an extra array-->
 #include<iostream>
-#include<climits>
 using namespace std;
 int main(){
-    int arr[]={1,5,4,8,3,45,7,33};
-    int mx=INT_MAX;
-    int smx=INT_MAX;
-    for(int i=0;i<=7;i++){
-        if(arr[i]>mx){
-            mx=arr[i];
-        }
+    int arr[]={1,2,3,4,5};
+    int i=0;
+    int j=4;
+    while(i<j){
+        int temp=arr[i];
+        arr[i]=arr[j];
+        arr[j]=temp;
+        i++;
+        j--;
     }
-    for(int j=0;j<=7;j++){
-        if(arr[j]!=mx){
-            smx=arr[j];
-        }
+    for(int x=0;x<=4;x++){
+        cout<<arr[x]<<" ";
     }
-    cout<<smx;
 }
